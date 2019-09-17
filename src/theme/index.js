@@ -7,8 +7,10 @@ export default {
     eight: '64px',
   },
   colors: {
+    darkgray: 'darkgray',
+    dark: '#D3D3D3',
     background: '#ffffff',
-    backgroundDark: '#f9f9f9',
+    backgroundDark: 'black',
     primary: '#fe2419',
     primaryDark: '#d4251c',
     secondary: '#26499d',

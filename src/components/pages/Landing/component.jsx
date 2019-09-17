@@ -1,11 +1,15 @@
 import React from 'react'
-
 import StandardLayout from '@/components/layouts/Standard'
+import Landing from './styles'
 
 const LandingPage = () => (
+
   <StandardLayout>
-    Page content should be there
+    <Landing>
+      Page center!
+    </Landing>
   </StandardLayout>
+
 )
 
 export default LandingPage

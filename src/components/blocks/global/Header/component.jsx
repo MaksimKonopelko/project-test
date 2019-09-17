@@ -7,6 +7,5 @@ export default () => (
   <Header>
     <Menu/>
     <Logo/>
-    Initial Application
   </Header>
 )

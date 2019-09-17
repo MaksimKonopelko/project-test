@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 export default styled.menu`
-  height: 128px;
-  color: ${props => props.theme.colors.backgroundDark};
+  height: 15%;
+  color: ${props => props.theme.colors.primaryDark};
+  text-align: right;
+  display: block;
+  padding: 10px;
 
   li {
     display : inline; 
