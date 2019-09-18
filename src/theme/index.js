@@ -9,6 +9,7 @@ export default {
   colors: {
     darkgray: 'darkgray',
     dark: '#D3D3D3',
+    white: 'white',
     background: '#ffffff',
     backgroundDark: 'black',
     primary: '#fe2419',

@@ -5,8 +5,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: ${props => props.theme.colors.dark};
-    
+    background-color: ${props => props.theme.colors.white};
     color: ${props => props.theme.colors.font};
     font-weight: ${props => props.theme.fontWeights.normal};
     font-family: ${props => props.theme.fontFamily}
