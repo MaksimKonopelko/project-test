@@ -6,8 +6,8 @@ import { LANDING_PAGE_PATH, LANDING_PAGE_PATH_BRANDS, LANDING_PAGE_PATH_DESIGNER
 const LandingPage = React.lazy(() => import('@/components/pages/Landing'))
 const Brands = React.lazy(() => import('@/components/pages/Brands'))
 const About = React.lazy(() => import('@/components/pages/About'))
-const Contact = React.lazy(() => import('@/components/pages/Brands'))
-const Designers = React.lazy(() => import('@/components/pages/Brands'))
+const Contact = React.lazy(() => import('@/components/pages/Contact'))
+const Designers = React.lazy(() => import('@/components/pages/Designers'))
 
 export default () => (
   <Router>

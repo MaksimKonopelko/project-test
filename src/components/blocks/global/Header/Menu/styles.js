@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 export default styled.menu`
-  display: flex;
+  display: ${props => props.theme.display.flex};
   flex-direction: row-reverse;
-  height: 15%;
+  // height: ${props => props.theme.size[15]};
   color: ${props => props.theme.colors.primaryDark};
   text-align: right;
   padding: 10px;
 
   li {
-    display : inline; 
-    margin-right: 30px;
+    display : ${props => props.theme.display.inline};
+    margin-right: ${props => props.theme.sizePx[30]};
     cursor: pointer;
 
     font-weight: 700;
@@ -27,7 +27,7 @@ export default styled.menu`
     min-height: min-content;
 
     li{
-      display: block;
+      display: ${props => props.theme.display.block};
     }  
   }
 `

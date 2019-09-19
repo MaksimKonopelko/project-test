@@ -1,4 +1,42 @@
 export default {
+  display: {
+    flex: 'flex',
+    inline: 'inline',
+    block: 'block',
+  },
+
+  position: {
+    relative: 'relative',
+    absolute: 'absolute',
+  },
+
+  side: {
+    center: 'center',
+    right: 'right',
+    left : 'left',
+    top: 'top',
+    butoom: 'butoom',
+  },
+
+  size: {
+    100: '100%',
+    75: '75%',
+    50: '50%',
+    40: '40%',
+    25: '25%',
+    15: '15%',
+    10: '10%',
+    5: '5%',
+    1: '1%',
+  },
+
+  sizePx: {
+      100: '100px',
+      50: '50px',
+      30: '30px',
+      10: '10px',
+  },
+
   unit: {
     half: '4px',
     single: '8px',
@@ -7,9 +45,11 @@ export default {
     eight: '64px',
   },
   colors: {
-    darkgray: 'darkgray',
-    dark: '#D3D3D3',
     white: 'white',
+
+    darkgray: 'darkgray',
+    dark1: 'dark',
+    dark: '#D3D3D3',
     background: '#ffffff',
     backgroundDark: 'black',
     primary: '#fe2419',
