@@ -9,9 +9,12 @@ export default styled.div`
     div{
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        grid-template-rows: repeat(2, 100px);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+        //grid-template-rows: repeat(auto-fit, 100px);
         align-items: center;
         justify-items: center;      
+        padding: 5%;
+
+        
     }
 `

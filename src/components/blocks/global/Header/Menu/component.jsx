@@ -3,14 +3,11 @@ import Menu from './styles'
 import { NavLink } from 'react-router-dom';
 import { arrMenu } from '../../../../../constants/paths';
 
-//const pages = ['HOME', 'BRANDS', 'DESIGNERS', 'ABOUT US', 'CONTACT'];
-
 const listItems = arrMenu.map((page) =>
   <li key={page.title}>
     <NavLink to={page.route}>
       {page.title}
-    </NavLink>
-    
+    </NavLink> 
   </li>
 );
 

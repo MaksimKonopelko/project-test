@@ -1,28 +1,38 @@
 import React from 'react'
-import Container from './styles'
+import ContainerStyle from './styles'
+import { sendRequest } from '../../../../services/http.service'
+import Card from './Cards/Card';
 
-export default () => (
-    <Container>
-        <div>
-            <div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-                <div>container</div>
-            </div>
-        </div>
-    </Container>
-)
+const url = 'https://gist.githubusercontent.com/AnDrOlEiN/b626d327c77b7a4f2cc105bdb0c44786/raw/90374f0b3bb23533ea7c67cf9f66ed9c8152ffb0/data.json';
+
+class Container extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { cards: [] };
+    }
+
+    componentDidMount = () => {
+        sendRequest(url, "GET").then(result => {
+            this.setState(() => ({
+                cards: result
+            }));
+        })
+    }
+
+    render() {
+        return (
+            <ContainerStyle>
+                <div>
+                    {/* <Card card ={123}></Card> */}
+                    {
+                        //console.log(this.state.cards)
+                         this.state.cards.map((card) => (<Card card={card}></Card>))
+                    }
+                </div>
+            </ContainerStyle>
+        )
+    }
+}
+
+export default Container

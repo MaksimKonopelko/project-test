@@ -2,12 +2,11 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Loader from '@/components/blocks/global/Loader'
 import { LANDING_PAGE_PATH, LANDING_PAGE_PATH_BRANDS, LANDING_PAGE_PATH_DESIGNERS, LANDING_PAGE_PATH_ABOUT_US, LANDING_PAGE_PATH_CONTACT } from '@/constants'
-
-const LandingPage = React.lazy(() => import('@/components/pages/Landing'))
-const Brands = React.lazy(() => import('@/components/pages/Brands'))
-const About = React.lazy(() => import('@/components/pages/About'))
-const Contact = React.lazy(() => import('@/components/pages/Contact'))
-const Designers = React.lazy(() => import('@/components/pages/Designers'))
+import LandingPage from './components/pages/Landing/component'
+import Brands from './components/pages/Brands'
+import About from './components/pages/About'
+import Designers from './components/pages/Designers'
+import Contact from './components/pages/Contact'
 
 export default () => (
   <Router>
