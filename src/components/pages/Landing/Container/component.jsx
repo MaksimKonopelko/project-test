@@ -23,11 +23,9 @@ class Container extends React.Component {
     render() {
         return (
             <ContainerStyle>
-                <div>
-                    {/* <Card card ={123}></Card> */}
-                    {
-                        //console.log(this.state.cards)
-                         this.state.cards.map((card) => (<Card card={card}></Card>))
+                <div>                  
+                    {               
+                         this.state.cards.map((card) => (<Card key={card.title} card={card}></Card>))
                     }
                 </div>
             </ContainerStyle>

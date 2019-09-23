@@ -11,7 +11,7 @@ export default styled.div`
     margin: 0 auto;
     width: ${props => props.theme.size[100]};
     height: ${props => props.theme.size[100]};
-    color: ${props => props.theme.colors.darkgray};
+    color: background: #eee;
     background-repeat: no-repeat; 
     background-size: cover; 
     max-width: ${props => props.theme.size[100]};
