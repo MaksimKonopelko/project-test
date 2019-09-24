@@ -77,4 +77,9 @@ export default {
     bold: 700,
   },
   fontFamily: ['Lato, "Helvetica Neue", Arial'],
+
+  flex_direction: {
+    column: 'column',
+    row: 'row',
+  }
 }

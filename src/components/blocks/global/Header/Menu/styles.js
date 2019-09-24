@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export default styled.menu`
   display: ${props => props.theme.display.flex};
-  flex-direction: row-reverse;
+  flex-direction: ${props => props.theme.flex_direction.row_reverse};
   // height: ${props => props.theme.size[15]};
   color: ${props => props.theme.colors.primaryDark};
   text-align: ${props => props.theme.side.right};
