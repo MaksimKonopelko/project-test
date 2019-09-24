@@ -7,10 +7,8 @@ const CardBottom = styled.div`
     flex-direction: row;
     margin: 0;
     padding: 0;
+    
 
-    span {
-        
-    }
 `
 
 class Card extends React.Component {

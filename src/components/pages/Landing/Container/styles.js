@@ -5,6 +5,7 @@ export default styled.div`
     flex-grow: 4;
     padding : 0%
     background: #eee;
+    margin: 0px 10px;
 
     div{
         display: grid;

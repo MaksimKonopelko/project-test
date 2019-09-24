@@ -1,24 +1,23 @@
 import styled from 'styled-components'
 
 export default styled.span`
-    display: block;
-    margin-bottom: 5%;
+    display: ${props => props.theme.display.block};
+    margin-bottom: ${props => props.theme.size[5]};
     
     div{
-        display: flex;
+        display: ${props => props.theme.display.flex};
         flex-direction: column;
         background: white;
         margin: 0px 10px;
-        padding: 5%
+        padding: ${props => props.theme.size[5]};
 
         div{
-            display: flex;
+            display: ${props => props.theme.display.flex};
             flex-direction: row;
-            
-            
+        
             img{
-                width: 100%;
-                height: 100%;
+                width: ${props => props.theme.size[100]};
+                height: ${props => props.theme.size[100]};
                 object-fit: cover;
                 //max-width: 225px;
             }

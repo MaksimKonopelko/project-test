@@ -3,6 +3,7 @@ export default {
     flex: 'flex',
     inline: 'inline',
     block: 'block',
+    grid: 'grid'
   },
 
   position: {
@@ -35,6 +36,8 @@ export default {
       50: '50px',
       30: '30px',
       10: '10px',
+      1: '1px',
+      0: '0px',
   },
 
   unit: {
@@ -46,10 +49,9 @@ export default {
   },
   colors: {
     white: 'white',
-
     darkgray: 'darkgray',
     dark1: 'dark',
-    dark: '#D3D3D3',
+    dark: '#eee;',
     background: '#ffffff',
     backgroundDark: 'black',
     primary: '#fe2419',

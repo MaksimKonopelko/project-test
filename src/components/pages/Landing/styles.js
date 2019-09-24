@@ -1,12 +1,8 @@
 import styled from 'styled-components'
 
 export default styled.main`
-  //height: 600px;
-  background: #eee;;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,auto));
-  //grid-template-columns: 20% 80%;
-
-  padding: 5%;
+  background: ${props => props.theme.colors.dark};
+  display: ${props => props.theme.display.grid};
+  grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+  padding: 3%;
 `

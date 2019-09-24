@@ -5,9 +5,9 @@ export default styled.menu`
   flex-direction: row-reverse;
   // height: ${props => props.theme.size[15]};
   color: ${props => props.theme.colors.primaryDark};
-  text-align: right;
-  padding: 10px;
-
+  text-align: ${props => props.theme.side.right};
+  padding: 1em 0;
+  
   li {
     display : ${props => props.theme.display.inline};
     margin-right: ${props => props.theme.sizePx[30]};
@@ -18,12 +18,12 @@ export default styled.menu`
     font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: ${props => props.theme.sizePx[1]};
   }
 
   @media (max-width: 586px) {
-    justify-content: center;
-    text-align: center;
+    justify-content: ${props => props.theme.side.center};
+    text-align: ${props => props.theme.side.center};
     min-height: min-content;
 
     li{
