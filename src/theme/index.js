@@ -81,5 +81,6 @@ export default {
   flex_direction: {
     column: 'column',
     row: 'row',
+    row_reverse: 'row-reverse',
   }
 }
