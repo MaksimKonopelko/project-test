@@ -4,19 +4,19 @@ import FilterSizeStyle from './styles';
 const FilterSize = () => (
   <FilterSizeStyle>
     <h2>Size</h2>
-    <label for="xs">
+    <label htmlFor="xs">
       <input type="checkbox" id="xs" />XS
     </label>
-    <label for="s">
+    <label htmlFor="s">
       <input type="checkbox" id="s" />S
     </label>
-    <label for="m">
+    <label htmlFor="m">
       <input type="checkbox" id="m" />M
     </label>
-    <label for="l">
+    <label htmlFor="l">
       <input type="checkbox" id="l" />L
     </label>
-    <label for="xl">
+    <label htmlFor="xl">
       <input type="checkbox" id="xl" />XL
     </label>
   </FilterSizeStyle>
