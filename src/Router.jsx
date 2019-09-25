@@ -7,6 +7,8 @@ import Brands from './components/pages/Brands'
 import About from './components/pages/About'
 import Designers from './components/pages/Designers'
 import Contact from './components/pages/Contact'
+import CardDetail from './components/pages/Landing/CardDetail'
+
 
 export default () => (
   <Router>
@@ -17,6 +19,8 @@ export default () => (
         <Route path={LANDING_PAGE_PATH_DESIGNERS} component={Designers} />
         <Route path={LANDING_PAGE_PATH_ABOUT_US} component={About} />
         <Route path={LANDING_PAGE_PATH_CONTACT} component={Contact} />
+
+        <Route path='/card_detail' component={CardDetail} />
       </Switch>
     </React.Suspense>
   </Router>
