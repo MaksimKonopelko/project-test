@@ -6,6 +6,9 @@ import { getStore } from '@/store'
 import ThemeProviderWrapper from '@/components/wrappers/ThemeProvider'
 
 function App () {
+
+  //console.log(this.store.getStore);
+
   return (
     <Provider store={getStore()}>
       <ThemeProviderWrapper>

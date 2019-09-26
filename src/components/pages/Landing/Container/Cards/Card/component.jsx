@@ -17,8 +17,7 @@ class Card extends React.Component {
     // }
 
     renderRedirect = () => {
-       console.log('sss', this.props.card._id)
-       //console.log('sss', this.props.history.push('/card_detail'.split()))
+        this.props.history.push(`/card_detail/${this.props.card._id.$oid}`);
     }
 
     render() {
