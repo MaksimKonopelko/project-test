@@ -1,31 +1,31 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import ContainerStyle from './styles'
-import { sendRequest } from '../../../../services/http.service'
 import Card from './Cards/Card';
-
-const url = 'https://gist.githubusercontent.com/AnDrOlEiN/b626d327c77b7a4f2cc105bdb0c44786/raw/90374f0b3bb23533ea7c67cf9f66ed9c8152ffb0/data.json';
+import { sendToRefreshProduct } from '../../../../reducer';
 
 class Container extends React.Component {
 
     constructor(props) {
         super(props);
+        this.props.dispatch(sendToRefreshProduct());
         this.state = { cards: [] };
     }
 
     componentDidMount = () => {
-        sendRequest(url, "GET").then(result => {
-            this.setState(() => ({
-                cards: result
-            }));
-        })
+        console.log('1', this.props.data);
+        // this.setState(() => ({
+        //     cards: this.props.root
+        // }));
     }
 
     render() {
+        console.log('2', this.props.data);
         return (
             <ContainerStyle>
                 <div>
                     {
-                        this.state.cards.map((card) => (<Card key={card.title} card={card}></Card>))
+                        this.props.data && this.state.cards.map((card) => (<Card key={card.title} card={card}></Card>))
                     }
                 </div>
             </ContainerStyle>
@@ -33,4 +33,8 @@ class Container extends React.Component {
     }
 }
 
-export default Container
+const mapStateToProps = state => {
+    return state.root;
+}
+
+export default connect(mapStateToProps)(Container)

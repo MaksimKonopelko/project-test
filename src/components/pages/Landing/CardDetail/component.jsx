@@ -1,30 +1,27 @@
 import React from 'react'
 import StandardLayout from '@/components/layouts/Standard'
 import { connect } from 'react-redux';
+import { sendToRefreshProduct } from '../../../../reducer';
 
 class CardDetail extends React.Component {
 
-  render() {
-    console.log(this.props.history.location.pathname);
-    //console.log(this.props.history.location);
-    console.log(this.state)
+  componentWillMount() {
+    this.props.dispatch(sendToRefreshProduct());
+  }
 
+  render() {
+    //console.log(this.props.match.params.id);
 
     return (
       <StandardLayout>
-        <div>carddddd</div>
-        {
-          //cache.add(request).then(function() {
-          // request has been added to the cache
-        }
+        <div>{this.props.match.params.id}</div>
       </StandardLayout>
     )
   }
 }
 
-function mapStateToProps(state) {
-  const { todos } = state
-  return { todoList: todos }
+const mapStateToProps = state => {
+  return state;
 }
 
 export default connect(mapStateToProps)(CardDetail)
