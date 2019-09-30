@@ -5,23 +5,44 @@ import { sendToRefreshProduct } from '../../../../reducer';
 
 class CardDetail extends React.Component {
 
-  componentWillMount() {
+  constructor(props) {
+    super(props);
+    this.card = null;
+  }
+
+  componentDidMount() {
     this.props.dispatch(sendToRefreshProduct());
   }
 
-  render() {
-    //console.log(this.props.match.params.id);
+  componentDidUpdate(){
+    this.card = this.props.data.find((elem) => elem._id.$oid == this.props.match.params.id);
+  }
 
+
+  componentWillReceiveProps(){
+    this.card = this.props.data.find((elem) => elem._id.$oid == this.props.match.params.id);
+    return true
+  }
+
+  render() {
+
+    console.log('this card_RENDER', this.card)
     return (
       <StandardLayout>
-        <div>{this.props.match.params.id}</div>
+        {
+          this.card &&  (
+          
+            <div>{this.card._id.$oid}</div>
+            
+          )
+        }
       </StandardLayout>
     )
   }
 }
 
 const mapStateToProps = state => {
-  return state;
+  return state.root;
 }
 
 export default connect(mapStateToProps)(CardDetail)
